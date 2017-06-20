@@ -22,9 +22,9 @@ menor ou igual a d-max a partir do ponto de referência <br />
 
 ### Requirements
 
-PHP 7.0+ <br />
-MySql 5.0+ <br />
-Git
+- PHP 7.0+
+- MySql 5.0+
+- Git
 
 ### Download
 
