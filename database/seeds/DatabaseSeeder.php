@@ -11,8 +11,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(PoiTableSeeder::class);
         factory(\App\Poi::class, 10)->create();
-    });
     }
 }

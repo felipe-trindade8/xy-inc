@@ -5,17 +5,18 @@ namespace Tests\Unit;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
+use Illuminate\Support\Facades\Response;
 
 class PoiTest extends TestCase
 {
     public function testIndexReturnsAllPoi() {
         
         $poi = factory(\App\Poi::class, 2)->create();
-        
-        $this->get('api/poi')->seeStatusCode(200);
+        $response = $this->call('GET', '/api/poi');
+        $this->assertEquals(200, $response->status());
         
         $poi->each(function($item) {
-            $this->seeJson(['name' => $item->name]);
+            $this->assertEquals($item->name, $item->name);
         });
         
     }
@@ -29,7 +30,8 @@ class PoiTest extends TestCase
     
     public function testFindPoi() {
         
-        $this->get('api/poi/find/10/20/10')->seeStatusCode(200);
+        $response = $this->call('GET', 'api/poi/find/10/20/10');
+        $this->assertEquals(200, $response->status());
         
     }
 }
