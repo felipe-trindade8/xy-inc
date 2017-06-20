@@ -6,41 +6,24 @@ Repository of API development test for registration and search of points of inte
 A XY Inc. é uma empresa especializada na produção de excelentes receptores GPS (Global
 Positioning System). A diretoria está empenhada em lançar um dispositivo inovador que
 promete auxiliar pessoas na localização de ponto de interesse (POIs), e precisa muito de sua
-ajuda.
+ajuda. <br />
 Você foi contratado para desenvolver a plataforma que fornecerá toda a inteligência ao
 dispositivo. Esta plataforma deve ser baseada em serviços, de forma a flexibilizar a integração, sendo
-estes:
-Serviço para cadastrar pontos de interesse com 3 atributos: Nome do POI, Coordenada X (inteiro não
-negativo) Coordenada Y (inteiro não negativo). Os POIs devem ser armazenados em uma base de dados.
-Serviço para listar todos os POIs cadastrados.
-Serviço para listar POIs por proximidade. Este serviço receberá uma coordenada X e uma c
+estes: <br />
+
+- Serviço para cadastrar pontos de interesse com 3 atributos: Nome do POI, Coordenada X (inteiro não
+negativo) Coordenada Y (inteiro não negativo). Os POIs devem ser armazenados em uma base de dados. <br />
+- Serviço para listar todos os POIs cadastrados. <br />
+- Serviço para listar POIs por proximidade. Este serviço receberá uma coordenada X e uma c
 oordenada Y, especificando um ponto de referência, em como uma distância máxima (dmax)
 em metros. O serviço deverá retornar todos os POIs da base de dados que estejam a uma distância
-menor ou igual a d-max a partir do ponto de referência. Exemplo:
-Base de Dados:
-'Lanchonete' (x=27, y=12)
-'Posto' (x=31, y=18)
-'Joalheria' (x=15, y=12)
-'Floricultura' (x=19, y=21)
-'Pub' (x=12, y=8)
-'Supermercado' (x=23, y=6)
-'Churrascaria' (x=28, y=2)
-Dado o ponto de referência (x=20, y=10) indicado pelo receptor GPS, e uma distância máxima de 10
-metros, o serviço deve retornar os seguintes POIs:
-Lanchonete
-Joalheria
-Pub
-Supermercado
-O que deve ser feito:
-Faça um planejamento e nos informe quando conseguirá entregar o teste.
-Construa os 3 serviços especificados
-O código-fonte deve ser disponibilizado na sua conta do Github, em um repositório com o
-nome xy-inc, juntamente com as instruções para execução e testes da aplicação (arquivo README)
+menor ou igual a d-max a partir do ponto de referência <br />
+
 
 ### Requirements
 
-PHP 7.0+
-MySql 5.0+
+PHP 7.0+ <br />
+MySql 5.0+ <br />
 Git
 
 ### Download
